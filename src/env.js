@@ -29,4 +29,7 @@ module.exports = {
   port: parseInt(requireFromEnv('PORT'), 10),
   version: packageJson.version,
   databaseUrl: requireFromEnv('DATABASE_URL'),
+  messageStoreConnectionString: requireFromEnv(
+    'MESSAGE_STORE_CONNECTION_STRING'
+  ),
 };

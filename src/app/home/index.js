@@ -1,4 +1,3 @@
-const camelCaseKeys = require('camelcase-keys');
 const express = require('express');
 
 function createHandlers({ queries }) {
