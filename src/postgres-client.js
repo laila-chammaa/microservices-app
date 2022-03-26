@@ -8,6 +8,7 @@ function createDatabase({ connectionString }) {
     if (!connectedClient) {
       connectedClient = client
         .connect()
+        // sets the search_path on that connection to include this message_store schema
         .then(() => client.query('SET search_path = message_store, public'))
         .then(() => client);
     }

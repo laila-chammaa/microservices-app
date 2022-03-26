@@ -15,6 +15,7 @@ function createActions({ messageStore }) {
         videoId,
       },
     };
+    debugger;
     const streamName = `viewing-${videoId}`;
     return messageStore.write(streamName, viewedEvent);
   }

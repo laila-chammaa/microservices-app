@@ -22,6 +22,7 @@ function createWrite({ db }) {
       if (notVersionConflict) {
         throw err;
       }
+      // Optimistic Concurrency Control by using version
       const actualVersion = parseInt(errorMatch[1], 10);
       const versionConflictError = new VersionConflictError(
         streamName,
